@@ -1,0 +1,74 @@
+POST http://localhost:3000/register/
+Content-Type : application/json
+
+{
+  "username": "adam_richard",
+  "password": "richard_567",
+  "name": "Adam Richard",
+  "gender": "male"
+}
+
+###
+
+POST http://localhost:3000/login/
+Content-Type: application/json
+
+{
+  "username":"JoeBiden",
+  "password":"biden@123"
+}
+
+###
+
+GET http://localhost:3000/user/tweets/feed/
+Authorization : Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkpvZUJpZGVuIiwiaWF0IjoxNjcyOTE4ODY3fQ.EXVypz7XA8I7L54t_OV0NwSoSmaNRh7tGVqsRMM-3Lc
+
+###
+
+
+GET http://localhost:3000/user/following/
+Authorization : Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkpvZUJpZGVuIiwiaWF0IjoxNjcyOTE4ODY3fQ.EXVypz7XA8I7L54t_OV0NwSoSmaNRh7tGVqsRMM-3Lc
+
+###
+
+
+GET http://localhost:3000/user/followers/
+Authorization : Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkpvZUJpZGVuIiwiaWF0IjoxNjcyOTE4ODY3fQ.EXVypz7XA8I7L54t_OV0NwSoSmaNRh7tGVqsRMM-3Lc
+
+###
+
+
+GET http://localhost:3000/tweets/1/
+Authorization : Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkpvZUJpZGVuIiwiaWF0IjoxNjcyOTE4ODY3fQ.EXVypz7XA8I7L54t_OV0NwSoSmaNRh7tGVqsRMM-3Lc
+
+###
+
+
+GET http://localhost:3000/tweets/1/likes/
+Authorization : Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkpvZUJpZGVuIiwiaWF0IjoxNjcyOTE4ODY3fQ.EXVypz7XA8I7L54t_OV0NwSoSmaNRh7tGVqsRMM-3Lc
+
+###
+
+
+GET http://localhost:3000/tweets/1/replies/
+Authorization : Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkpvZUJpZGVuIiwiaWF0IjoxNjcyOTE4ODY3fQ.EXVypz7XA8I7L54t_OV0NwSoSmaNRh7tGVqsRMM-3Lc
+
+###
+
+
+GET http://localhost:3000/user/tweets/
+Authorization : Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkpvZUJpZGVuIiwiaWF0IjoxNjcyOTE4ODY3fQ.EXVypz7XA8I7L54t_OV0NwSoSmaNRh7tGVqsRMM-3Lc
+
+###
+
+
+POST http://localhost:3000/user/tweets/
+Authorization : Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkpvZUJpZGVuIiwiaWF0IjoxNjcyOTE4ODY3fQ.EXVypz7XA8I7L54t_OV0NwSoSmaNRh7tGVqsRMM-3Lc
+
+###
+
+
+DELETE http://localhost:3000/tweets/5
+Authorization : Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkpvZUJpZGVuIiwiaWF0IjoxNjcyOTE4ODY3fQ.EXVypz7XA8I7L54t_OV0NwSoSmaNRh7tGVqsRMM-3Lc
+
+###
