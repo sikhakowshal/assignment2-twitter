@@ -9,7 +9,6 @@ const jwt = require("jsonwebtoken");
 
 const app = express();
 app.use(express.json());
-const format = require("date-fns/format");
 
 const dbPath = path.join(__dirname, "twitterClone.db");
 let db = null;
@@ -322,7 +321,7 @@ app.get(
     } else {
       const getTweetRepliesQuery = `
             SELECT user.name, reply.reply
-            FROM user JOIN reply ON user.user_id = reply.reply_id
+            FROM user JOIN reply ON user.user_id = reply.user_id
             WHERE reply.tweet_id = ${tweetId};
         `;
       const tweetRepliesArray = await db.all(getTweetRepliesQuery);
@@ -376,7 +375,6 @@ app.post("/user/tweets/", authenticateToken, async (request, response) => {
   const dbUser = await db.get(getUserQuery);
   const userId = dbUser.user_id;
   let dateTime = new Date();
-  dateTime = format(dateTime, "yyyy-MM-dd");
 
   const createPostQuery = `
     INSERT INTO tweet (tweet, user_id, date_time)
