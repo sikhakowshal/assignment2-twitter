@@ -70,7 +70,7 @@ app.post("/register/", async (request, response) => {
   } else {
     if (password.length < 6) {
       response.status(400);
-      response.send("Password too short");
+      response.send("Password is too short");
     } else {
       const hashedPassword = await bcrypt.hash(password, 10);
       const createUserQuery = `
@@ -100,7 +100,7 @@ app.post("/login/", async (request, response) => {
   const dbUser = await db.get(getUserQuery);
   if (dbUser === undefined) {
     response.status(400);
-    response.send("Invalid User");
+    response.send("Invalid user");
   } else {
     isPasswordChecked = await bcrypt.compare(password, dbUser.password);
     if (isPasswordChecked === true) {
