@@ -50,7 +50,7 @@ Authorization : Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ikpv
 ###
 
 
-GET http://localhost:3000/tweets/1/replies/
+GET http://localhost:3000/tweets/2/replies/
 Authorization : Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkpvZUJpZGVuIiwiaWF0IjoxNjcyOTE4ODY3fQ.EXVypz7XA8I7L54t_OV0NwSoSmaNRh7tGVqsRMM-3Lc
 
 ###
